@@ -194,15 +194,15 @@ img {
 }
 
 .widget-title{
-    font-size: 11px;
-    font-size: 0.785714286rem;
+    /*font-size: 0.785714286rem;*/
+    font-size: 20px;
     line-height: 2.181818182;
     font-weight: bold;
     text-transform: uppercase;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     background-color: #555;
-    padding: 10px 5px;
+    padding: 5px 5px;
 }
 /* Shared Post Format styling */
 article.format-quote footer.entry-meta,
@@ -575,8 +575,9 @@ a:hover {
     font-size: 1.714285714rem;
     line-height: 1.285714286;
     margin-bottom: 14px;
-    margin: 1em;
+    /*margin: 1em;*/
 }
+
 .site-header h2 {
     font-weight: normal;
     font-size: 13px;
@@ -620,7 +621,7 @@ a:hover {
         display: block;
         font-size: 13px;
         font-size: 0.785714286rem;
-        line-height: 2.181818182rem;
+        line-height: 5.181818182rem;
         white-space: normal;
     }
     
@@ -862,7 +863,7 @@ footer[role="contentinfo"] a:hover {
 }
 .entry-header .comments-link {
     margin-top: 24px;
-    margin-top: 1.714285714rem;
+    margin-top: 0.714285714rem;
     font-size: 13px;
     font-size: 0.928571429rem;
     line-height: 1.846153846;
@@ -1605,14 +1606,15 @@ a.comment-edit-link:hover {
 }
 .widget_search label {
     display: block;
-    font-size: 0.785714286rem;
+    /*font-size: 0.785714286rem;*/
+    font-size: 20px;
     line-height: 2.181818182;
     font-weight: bold;
     text-transform: uppercase;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-color: #555;
-    padding: 10px 5px;
+    padding: 5px;
 }
 .widget_search input {
     max-width: 90%;
@@ -1735,7 +1737,7 @@ img#wpstats {
  #topnav-menu li {
         float: left;
         position: relative;
-        width: 100%;
+        /*width: 100%;*/
     }
 /*.dropdown-menu{display:none}*/
 }
@@ -1744,6 +1746,15 @@ img#wpstats {
     body {
         background-color: #e6e6e6;
     }
+
+    .site-header h1 a>img{
+        width:340px
+    }
+
+    .entry-header .entry-title a{
+        font-size: 25px;
+    }
+
     article{
         display: block;
         background-color: #fff;
@@ -1846,13 +1857,13 @@ img#wpstats {
         font-size: 26px;
         font-size: 1.857142857rem;
         line-height: 1.846153846;
-        margin: 1em;
+        margin: 0;
 
     }
   
     .entry-header .entry-title {
         font-size: 22px;
-        font-size: 1.571428571rem;
+        font-size: 2.571428571rem;
     }
     #respond form input[type="text"] {
         width: 46.333333333%;
@@ -1916,6 +1927,14 @@ img#wpstats {
     }
     body.custom-background-empty {
         background-color: #fff;
+    }
+
+    .site-header h1 a>img{
+        width:540px
+    }
+
+    #recent-posts-2 ul li, .recentcomments{
+        margin: 10px 5px;
     }
 
 }

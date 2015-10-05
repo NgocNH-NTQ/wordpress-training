@@ -89,3 +89,5 @@ if ( !defined('ABSPATH') )
 require_once(ABSPATH . 'wp-settings.php');
 
 define( 'WP_ALLOW_MULTISITE', true );
+
+define( 'SAVEQUERIES', true );

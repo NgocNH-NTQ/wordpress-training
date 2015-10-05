@@ -30,6 +30,9 @@
     </a>
 <?php } // end if ?>   
                 </div><!-- .site-info -->
+                <div class="col-sm-6 copyright">
+                    <p>Created by <a href="www.hongngocitc.com">Nguyen Hong Ngoc</a></p>
+                </div>
             </div>
         </div>
     </footer><!-- #colophon -->

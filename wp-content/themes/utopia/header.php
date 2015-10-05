@@ -61,14 +61,14 @@
                 ?>
                 <nav class="navbar navbar-default" role="navigation">
                     <!-- Mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnav-menu">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
+<!--                    <div class="navbar-header">-->
+<!--                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnav-menu">-->
+<!--                            <span class="sr-only">Toggle navigation</span>-->
+<!--                            <span class="icon-bar"></span>-->
+<!--                            <span class="icon-bar"></span>-->
+<!--                            <span class="icon-bar"></span>-->
+<!--                        </button>-->
+<!--                    </div>-->
                     <nav id="topnav" class="clearfix" role="navigation">
                         <p id="topnav-icon"></p>
                         <?php
@@ -76,9 +76,10 @@
                             'theme_location' => 'secondary',
                             'container' => false,
                             'menu_id' => 'topnav-menu',
-                             'menu_class' => 'collapse navbar-collapse main-nav',
-                            'fallback_cb' => '',
-                            'depth' =>3,
+//                                'menu_class' => 'collapse navbar-collapse main-nav',
+                                'menu_class' => 'collapse_1 navbar-collapse_1 main-nav',
+                                'fallback_cb' => '',
+                                'depth' =>3,
                               'walker' => new wp_bootstrap_navwalker()
                             )
                         );
