@@ -20,6 +20,8 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+define('WP_CACHE', true); //Added by WP-Cache Manager
+define( 'WPCACHEHOME', 'C:\wamp\www\wordpress\wp-content\plugins\wp-super-cache/' ); //Added by WP-Cache Manager
 define('DB_NAME', 'wp_demo_20151001');
 
 /** MySQL database username */
@@ -79,6 +81,13 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 
+define( 'WP_ALLOW_MULTISITE', true );
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', false);
+define('DOMAIN_CURRENT_SITE', 'localhost');
+define('PATH_CURRENT_SITE', '/wordpress/');
+define('SITE_ID_CURRENT_SITE', 1);
+define('BLOG_ID_CURRENT_SITE', 1);
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
@@ -87,7 +96,5 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-
-define( 'WP_ALLOW_MULTISITE', true );
 
 define( 'SAVEQUERIES', true );

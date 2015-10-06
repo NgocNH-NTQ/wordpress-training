@@ -655,7 +655,7 @@ function get_bloginfo( $show = '', $filter = 'raw' ) {
 			break;
 		case 'charset':
 			$output = get_option('blog_charset');
-			if ('' == $output) $output = 'UTF-8';
+			if ('' == $output) $output = 'utf-8';
 			break;
 		case 'html_type' :
 			$output = get_option('html_type');
