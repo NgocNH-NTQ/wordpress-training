@@ -14,9 +14,8 @@
     </div>	<!-- end of main -->
 
     <div id="tooplate_footer">
-
-      Copyright &copy; 2048 <a href="#">Your Company Name</a>
-
+        Copyright &copy; <?php echo date('Y')?> <a href="#"><?php bloginfo('name')?></a> All Rights Reserved.
+        <p>Created by <a href="www.facebook.com/ngocnghjckngom"><b>NgocNH</b></p>
     </div> <!-- end of tooplate_footer -->
 
     </div> <!-- end of wrapper -->

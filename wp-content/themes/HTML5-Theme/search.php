@@ -5,7 +5,9 @@
  * @since HTML5 Reset 2.0
  */
  get_header(); ?>
+<div id="tooplate_content">
 
+	<div class="col_w570 float_l">
 	<?php if (have_posts()) : ?>
 
 		<h2><?php _e('Search Results','html5reset'); ?></h2>
@@ -34,10 +36,19 @@
 
 	<?php else : ?>
 
-		<h2><?php _e('Nothing Found','html5reset'); ?></h2>
+		<h2><?php _e('Nothing found... 404','html5reset'); ?></h2>
 
 	<?php endif; ?>
 
-<?php get_sidebar(); ?>
+	</div>
+
+	<div class="col_w260b float_r">
+
+		<?php get_sidebar(); ?>
+
+	</div>
+
+	<div class="cleaner"></div>
+</div> <!-- end of content -->
 
 <?php get_footer(); ?>

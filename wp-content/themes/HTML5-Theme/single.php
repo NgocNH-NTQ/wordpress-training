@@ -15,7 +15,7 @@
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 			<h1 class="entry-title"><?php the_title(); ?></h1>
-
+			<p><?php posted_in(); ?></p>
 			<div class="entry-content">
 
 				<?php the_content(); ?>
@@ -24,11 +24,9 @@
 
 				<?php the_tags( __('Tags: ','html5reset'), ', ', ''); ?>
 
-				<?php posted_on(); ?>
-
 			</div>
 
-			<?php edit_post_link(__('Edit this entry','html5reset'),'','.'); ?>
+
 
 		</article>
 
@@ -40,10 +38,8 @@
 
 </div>
 
-<div class="col_w260b float_r">
-
+	<div class="col_w260b float_r">
 		<?php get_sidebar(); ?>
-
 	</div>
 
 	<div class="cleaner"></div>

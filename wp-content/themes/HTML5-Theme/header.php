@@ -131,44 +131,25 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-	<!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
-<!--	<div id="wrapper">-->
-<!---->
-<!--		<header id="header" role="banner">-->
-<!--			<h1><a href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--" title="--><?php //echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?><!--" rel="home">--><?php //bloginfo( 'name' ); ?><!--</a></h1>-->
-<!--			<div class="description">--><?php //bloginfo( 'description' ); ?><!--</div>-->
-<!--		</header>-->
-<!---->
-<!--		<nav id="nav" role="navigation">-->
-<!--			--><?php //wp_nav_menu( array('theme_location' => 'primary') ); ?>
-<!--		</nav>-->
-
 	<div id="tooplate_wrapper">
 
 		<div id="tooplate_header">
 
 			<div id="tooplate_menu">
-				<ul>
-					<li><a href="index.html" class="current">Home</a></li>
-					<li><a href="gallery.html">Gallery</a></li>
-					<li><a href="news.html">News</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
+				<nav id="nav" role="navigation">
+					<?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
+				</nav>
 				<div class="cleaner"></div>
 			</div> <!-- end of menu -->
 
-			<div id="site_title"><h1><a href="#">Blue Wave</a><span>Your Tagline Goes Here</span></h1></div>
+			<div id="site_title"><h1><a href="#"><?php bloginfo('name')?></a><span><?php bloginfo('description')?></span></h1></div>
 
 		</div> <!-- end of header -->
 
 		<div id="tooplate_middle">
 			<div id="search_box">
-				<form action="#" method="get">
-					<input type="text" value="Search" name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
-					<input type="submit" name="Search" value="" id="searchbutton" title="Search" />
-				</form>
+				<?php get_search_form(); ?>
+
 			</div> <!-- end of search box -->
 		</div> <!-- end of middle -->
 

@@ -114,8 +114,8 @@
 	// Navigation - update coming from twentythirteen
 	function post_navigation() {
 		echo '<div class="navigation">';
-		echo '	<div class="next-posts">'.get_next_posts_link('&laquo; Older Entries').'</div>';
-		echo '	<div class="prev-posts">'.get_previous_posts_link('Newer Entries &raquo;').'</div>';
+		echo '	<div class="next-posts">'.get_next_posts_link('&laquo; Older Post').'</div>';
+		echo '	<div class="prev-posts">'.get_previous_posts_link('Newer Post &raquo;').'</div>';
 		echo '</div>';
 	}
 
@@ -129,5 +129,9 @@
 			esc_attr( get_the_author() )
 		);
 	}
+
+function posted_in (){
+	echo the_category(', '). ' | Date: '.get_the_date();
+}
 
 ?>

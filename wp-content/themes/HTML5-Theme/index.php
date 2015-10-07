@@ -10,76 +10,69 @@
 <div id="tooplate_content">
 
     <div class="col_w880 home_intro">
-        <p><em>Pellentesque habitant morbi tristique senectus et netus et.</em> Quisque blandit porttitor consequat.
-            Praesent viverra lorem at magna tempor vitae egestas risus convallis.Validate <a
-                href="http://validator.w3.org/check?uri=referer" rel="nofollow"><strong>XHTML</strong></a> and <a
-                href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><strong>CSS</strong></a>. </p>
-        <a href="#" class="learnmore"></a>
+        <?php
+        query_posts('posts_per_page=1');
+        if(have_posts()) : while(have_posts()) : the_post() ?>
+            <p><em><?php the_title() ?></em></p>
+            <?php the_excerpt(); ?>
+        <?php endwhile; ?>
+        <?php else :?>
+            <?php _e('Nothing Found','html5reset'); ?>
+        <?php endif;?>
 
+        <a href="<?php the_permalink(); ?>" class="learnmore">
+            <span style="text-indent: -9999999999px; position: absolute">Learn more</span>
+        </a>
         <div class="cleaner"></div>
     </div>
 
     <div class="col_w880">
+        <?php
+        $count_post=0;
+        $args = array(
+            'cat'=>4,
+            'posts_per_page'=>3,
+            'orderby'=>'rand'
+        );
+        $tutorials = new WP_Query($args);
+        while ($tutorials->have_posts() && $count_post < 3){
+            $tutorials->the_post();
+            $count_post ++;
+        ?>
+        <div class="col_w260 fp_box <?php echo ($count_post == 3)?'col_last':''; ?>">
+            <h2><?php the_title();?></h2>
+            <?php the_excerpt()?>
 
-        <div class="col_w260 fp_box">
-            <h2>Online Marketing</h2>
-
-            <p>Blue Wave is brought to you by <a rel="nofollow" href="http://www.tooplate.com">Website Templates</a>.
-                Feel free to adapt and apply this template for your websites. Credits go to <a rel="nofollow"
-                                                                                               href="http://www.photovaco.com"
-                                                                                               target="_blank">Free
-                    Photos</a> for photos used in this template. Sed ac ipsum leo.</p>
-            <a class="more" href="#">Learn more</a>
+            <a class="more" href="<?php the_permalink()?>">Learn more</a>
         </div>
-
-        <div class="col_w260 fp_box">
-            <h2>Website Templates</h2>
-
-            <p><em>Vivamus non justo lacus, nec tristique sapien.</em> Etiam quis velit lacus. In sodales, ligula a
-                condimentum cursus, elit elit pulvinar massa, non placerat mi sit amet nisi. Morbi et arcu et urna
-                tristique imperdiet non ut massa. Sed sit amet turpis.</p>
-            <a class="more" href="#">Learn more</a>
-        </div>
-
-        <div class="col_w260 fp_box col_last">
-            <h2>Graphic Designs</h2>
-
-            <p><em>Etiam ut nibh et urna cursus ultricies nec vel nunc.</em> In hac habitasse platea dictumst. In
-                pretium eleifend arcu, sit amet faucibus nunc egestas ac. Donec pharetra interdum sem, et condimentum
-                nisl lacinia eget. Proin in tortor dolor.</p>
-            <a class="more" href="#">Learn more</a>
-        </div>
+        <?php } wp_reset_postdata(); ?>
 
         <div class="cleaner"></div>
     </div>
 
     <div class="col_w880 portfolio">
 
-        <h2>Portfolio</h2>
+        <h2>PHP</h2>
+        <?php
+            $count_PHP_post =0;
+            $params = array(
+                'cat'=>7,
+                'posts_per_page'=>3,
+                'orderby'=>'rand',
+            );
+            $aryPhpPosts = new WP_Query($params);
+            while($aryPhpPosts->have_posts() && $count_PHP_post <3 ){
+                $aryPhpPosts->the_post();
+                $count_PHP_post ++;
+        ?>
+        <div class="col_w260 <?php echo ($count_PHP_post == 3)?'col_last':''; ?>">
+            <h6><?php the_title(); ?></h6>
+            <?php if(has_post_thumbnail()) the_post_thumbnail()?>
 
-        <div class="col_w260">
-            <h6>Etiam Magna Metus</h6>
-            <img src="<?php echo get_template_directory_uri(); ?>/_/inc/images/tooplate_image_01.jpg" alt="Image 01"/>
-
-            <p>Nunc ut nisi felis, et iaculis erat ut mauris sit amet purus molestie malesuada.</p>
-            <a class="more" href="#">Learn more</a>
+            <?php the_excerpt(); ?>
+            <a class="more" href="<?php the_permalink() ?>">Learn more</a>
         </div>
-
-        <div class="col_w260">
-            <h6>Morbi Battis Porta</h6>
-            <img src="<?php echo get_template_directory_uri(); ?>/_/inc/images/tooplate_image_02.jpg" alt="Image 02"/>
-
-            <p>Etiam et quam metus, vitae sodales tortor. In risus urna, scelerisque eu vetibulums.</p>
-            <a class="more" href="#">Learn more</a>
-        </div>
-
-        <div class="col_w260 col_last">
-            <h6>Nullam ut Neque Neque</h6>
-            <img src="<?php echo get_template_directory_uri(); ?>/_/inc/images/tooplate_image_03.jpg" alt="Image 03"/>
-
-            <p>Curabitur lobortis imperdiet nisi, malesuada egestas purus viverra vitae.</p>
-            <a class="more" href="#">Learn more</a>
-        </div>
+        <?php } wp_reset_postdata()?>
 
         <div class="cleaner"></div>
     </div>
