@@ -130,8 +130,34 @@
 		);
 	}
 
-function posted_in (){
-	echo the_category(', '). ' | Date: '.get_the_date();
-}
+	function posted_in (){
+		echo the_category(', '). ' | Date: '.get_the_date();
+	}
+
+//	function create_short_code_rand_post ($param, $content){
+//		$random_query = new WP_Query(array(
+//			'posts_per_page' => $param['post'],
+//			'orderby' => 'rand'
+//		));
+//
+//		ob_start();
+//		if ( $random_query->have_posts() ) :
+//			"<ol>";
+//			while ( $random_query->have_posts() ) :
+//				$random_query->the_post();?>
+<!---->
+<!--				<li><a href="--><?php //the_permalink(); ?><!--"><h5>--><?php //the_title(); ?><!--</h5></a></li>-->
+<!---->
+<!--			--><?php //endwhile;
+//			"</ol>";
+//		endif;
+//		$list_post = ob_get_contents(); //L?y toàn b? n?i dung phía trên b? vào bi?n $list_post ?? return
+//
+//		ob_end_clean();
+//
+//		return $list_post;
+//	}
+//
+//	add_shortcode('list_rand_post','create_short_code_rand_post');
 
 ?>

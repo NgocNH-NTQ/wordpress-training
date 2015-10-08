@@ -28,7 +28,7 @@
                 </a>
             <?php } ?>
 
-			<?php the_excerpt()?><a href="<?php the_permalink()?>">More...</a>
+			<?php the_content('More...'); ?>
 		</div>
         <?php endwhile; wp_reset_postdata() ?>
 
